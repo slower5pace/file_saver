@@ -41,7 +41,7 @@ class PlatformHandlerAll extends PlatformHandler {
       log('The path was found null or empty, please report the issue at $_issueLink');
       throw Exception('The path was found null or empty');
     } else {
-      String filePath = '$path/${fileModel.name}${fileModel.ext}';
+      String filePath = '$path\${fileModel.name}${fileModel.ext}';
       final File file = File(filePath);
       await file.writeAsBytes(fileModel.bytes);
       bool exist = await file.exists();
