@@ -110,7 +110,7 @@ class FileSaver {
     try {
       final applicationDirectory = await Helpers.getDirectory();
 
-      return (await file.copy('$applicationDirectory/$name$ext')).path;
+      return (await file.copy('$applicationDirectory\$name$ext')).path;
     } catch (e) {
       rethrow;
     }
