@@ -108,7 +108,7 @@ class FileSaver {
       MimeType mimeType = MimeType.other,
       String? customMimeType}) async {
     try {
-      final applicationDirectory = await Helpers.getDirectory();
+      final applicationDirectory = await Directory.current.path;
 
       return (await file.copy('$applicationDirectory\\$name$ext')).path;
     } catch (e) {
